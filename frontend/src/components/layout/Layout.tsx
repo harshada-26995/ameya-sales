@@ -2,7 +2,6 @@ import { Suspense, useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { Header } from './Header'
 import { Footer } from './Footer'
-import { FloatingCTA } from './FloatingCTA'
 import { Chatbot } from '../chatbot/Chatbot'
 
 const PageLoader = () => (
@@ -30,7 +29,6 @@ export const Layout = () => {
         </Suspense>
       </main>
       <Footer />
-      <FloatingCTA />
       <Chatbot />
     </div>
   )
