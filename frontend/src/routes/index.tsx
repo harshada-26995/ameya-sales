@@ -14,7 +14,9 @@ const CalculatorPage = lazy(() => import('@/pages/Calculator').then(m => ({ defa
 const FAQPage = lazy(() => import('@/pages/FAQ').then(m => ({ default: m.FAQPage })))
 const PrivacyPolicyPage = lazy(() => import('@/pages/legal/PrivacyPolicy').then(m => ({ default: m.PrivacyPolicyPage })))
 const TermsPage = lazy(() => import('@/pages/legal/Terms').then(m => ({ default: m.TermsPage })))
+const CookiesPolicyPage = lazy(() => import('@/pages/legal/CookiesPolicy').then(m => ({ default: m.CookiesPolicyPage })))
 const ProjectsPage = lazy(() => import('@/pages/Projects').then(m => ({ default: m.ProjectsPage })))
+const SitemapPage = lazy(() => import('@/pages/Sitemap').then(m => ({ default: m.SitemapPage })))
 const NotFoundPage = lazy(() => import('@/pages/NotFound').then(m => ({ default: m.NotFoundPage })))
 
 const Loader = () => (
@@ -45,6 +47,8 @@ const router = createBrowserRouter([
       { path: 'faq', element: <Suspense fallback={<Loader />}><FAQPage /></Suspense> },
       { path: 'privacy-policy', element: <Suspense fallback={<Loader />}><PrivacyPolicyPage /></Suspense> },
       { path: 'terms', element: <Suspense fallback={<Loader />}><TermsPage /></Suspense> },
+      { path: 'cookies-policy', element: <Suspense fallback={<Loader />}><CookiesPolicyPage /></Suspense> },
+      { path: 'sitemap', element: <Suspense fallback={<Loader />}><SitemapPage /></Suspense> },
       { path: '*', element: <Suspense fallback={<Loader />}><NotFoundPage /></Suspense> },
     ],
   },
