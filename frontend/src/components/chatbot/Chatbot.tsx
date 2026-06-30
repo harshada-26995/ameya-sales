@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { MessageSquare, X, Send, Bot, User, Phone, MessageCircle } from 'lucide-react'
+import { X, Send, Bot, User, Phone, MessageCircle } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SITE_CONFIG } from '@/config/site'
 
@@ -143,7 +143,7 @@ export const Chatbot = () => {
   }
 
   return (
-    <div className="fixed bottom-6 left-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50">
       {/* Floating Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
@@ -155,11 +155,11 @@ export const Chatbot = () => {
         whileTap={{ scale: 0.95 }}
         className="w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center cursor-pointer transition-colors relative"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6" /> : <Bot className="w-6 h-6" />}
         {!isOpen && (
           <span className="absolute -top-1 -right-1 flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-50"></span>
           </span>
         )}
       </motion.button>
@@ -172,7 +172,7 @@ export const Chatbot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             transition={{ type: 'spring', duration: 0.5 }}
-            className="absolute bottom-18 left-0 w-[350px] sm:w-[380px] h-[500px] bg-white rounded-2xl shadow-2xl border border-slate-100 flex flex-col overflow-hidden"
+            className="absolute bottom-18 right-0 w-[350px] sm:w-[380px] h-[500px] bg-white rounded-2xl shadow-2xl border border-slate-100 flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white p-4 flex items-center justify-between shadow-md">
