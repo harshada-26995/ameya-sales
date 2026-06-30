@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { FloatingCTA } from './FloatingCTA'
+import { Chatbot } from '../chatbot/Chatbot'
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -30,6 +31,7 @@ export const Layout = () => {
       </main>
       <Footer />
       <FloatingCTA />
+      <Chatbot />
     </div>
   )
 }
